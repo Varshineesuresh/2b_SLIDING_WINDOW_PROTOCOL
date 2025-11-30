@@ -9,7 +9,7 @@
 6. Stop the Program
 ## PROGRAM
 ## SERVER
-
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8004))
@@ -28,8 +28,9 @@ while True:
         if ack:
             print(ack)
             i+=s
-
+```
 ## CLIENT
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8004))
@@ -37,7 +38,7 @@ while True:
     print(s.recv(1024).decode())
     s.send("acknowledgement recived from the server".encode())
 
-
+```
 ## OUPUT
 <img width="1032" height="615" alt="image" src="https://github.com/user-attachments/assets/3e3ac7c2-ee0f-49fa-9c44-13bd5c9bcdc6" />
 
